@@ -64,7 +64,7 @@ For every section the "winner" is the highest cosine similarity reference point.
 |---------|
 | ![A](img/thor/thor_pie.png) |
 
-The pie chart is fairly similar to the aggregate Marvel chart shown at the beginning.
+We see similarities to the aggregate Marvel chart shown at the beginning, but Thor has less comedy and more confrontation.
 
 ## Heatmap
 
@@ -83,6 +83,8 @@ Here's a live action view:
 | |
 |---------|
 | ![A](img/thor/thor_bar.gif) |
+
+This is a good proxy for "tone shifts" throughout the film: climactic confrontation for four sections, then a break for a comic relief section, then a break for a character emotional development, etc., in contrast to the raw tSNE animation which mainly captured plot.
 
 # Anatomy of an Action Movie
 
@@ -114,46 +116,10 @@ The very real differences here are interesting to me as an action movie fan. The
 |---------|
 | ![A](img/batman/batman_pie.png) |
 
-## tSNE
+## Final Notes
 
-tSNE is a variant of the winning-weighting scheme we used to create the pie charts, but with k=2 (the top two closest categories) rather than k=1. I thought it was valuable to observe the "raw spread" of the data, and by using k=2 I introduced some mild variance so that the points did not strictly overlap. Presumably, the noticeable clusters are our large categories corresponding to the pie charts.
+The choice of references used is crucial. The set I used is appropriate for screenplay analysis, but analyses of literature, social media, etc. would benefit from a different set.
 
-### Marvel
+"Real time tone monitoring" is an interesting use case for text embeddings. Let's say you turn your text editor's "embedding check" to ON, and observe the heatmap in the side panel. If you've exceeded your "foreshadowing" setting of 10%, maybe you'll see a red line appear beneath your paragraph. You've said too much!
 
-| |
-|---------|
-| ![A](img/marvel/marvelstatic_tsne.png) |
-
-### Bond
-
-| |
-|---------|
-| ![A](img/bond/bondstatic_tsne.png) |
-
-### Batman
-
-| |
-|---------|
-| ![A](img/batman/batmanstatic_tsne.png) |
-
-## Live Action
-
-The bar charts I include here for completeness, but they're less useful in a collection, since they don't actually show the give and take between types over a narrative progression.
-
-### Marvel
-
-| |
-|---------|
-| ![A](img/marvel/marvel_bar.gif) |
-
-### Bond
-
-| |
-|---------|
-| ![A](img/bond/bond_bar.gif) |
-
-### Batman
-
-| |
-|---------|
-| ![A](img/batman/batman_bar.gif) |
+Other analysis might investigate the relationship of external factors - reviews, box office revenues, etc. - to the narrative structure of the screenplay. It would be interesting to compare transcripts of movies - the "real" movie vs. the "nominal" screenplay - and see how they changed, to get a sense of a "director impact" or "production impact" score.
